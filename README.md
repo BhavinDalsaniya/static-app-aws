@@ -1,6 +1,6 @@
 # static-app-aws
-# Here 54.88.58.168 is my Public IP
-# Steps to Set Up and Deploy the Spring Boot Application
+- Here 54.88.58.168 is my Public IP
+- Steps to Set Up and Deploy the Spring Boot Application
 
 ## 1. Create a VPC and Subnet
 - First, create a VPC in any one region with the CIDR block `10.0.0.0/16`.
@@ -30,7 +30,7 @@
 
 
 ## 6. Install Required Software
-Update the package list and install Java 17 and Maven:
+- Update the package list and install Java 17 and Maven:
 1. sudo apt update
 2. sudo apt install openjdk-17-jdk -y
 3. sudo apt install maven -y
@@ -40,10 +40,10 @@ Update the package list and install Java 17 and Maven:
 2. mvn --version
 
 ## 8. Build the Application
-Build the application using Maven:
+- Build the application using Maven:
 
 mvn clean install
-This will generate a .jar file inside the target folder.
+- This will generate a .jar file inside the target folder.
 
 ## 9. Run the Application
 Execute the JAR file:
