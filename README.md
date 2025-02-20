@@ -74,9 +74,9 @@ Initially, you will see a blank page because no data has been added yet.
 http://54.88.58.168:8080/h2-console/
 
 - Use the following details to connect:
-URL: jdbc:h2:mem:rjanytest
-Username: sa
-Password: 123
+- URL: jdbc:h2:mem:rjanytest
+1. Username: sa
+2. Password: 123
 
 ## 13. Add Data to the Application
 - Use a tool like ReqBin to send a POST request to:
@@ -93,5 +93,4 @@ Password: 123
 - Verify the data by visiting:
 - http://54.88.58.168:8080/student
 - To fetch a specific student by ID, use:
-
-http://54.88.58.168:8080/student/1
+1. http://54.88.58.168:8080/student/1
