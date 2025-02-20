@@ -46,11 +46,11 @@ mvn clean install
 - This will generate a .jar file inside the target folder.
 
 ## 9. Run the Application
--Execute the JAR file:
+- Execute the JAR file:
 1. java -jar target/spring-embedded-h2-db-0.0.1-SNAPSHOT.jar
 
 - By default, Spring Boot runs on port 8080. To check if the application is running:
-lsof -i :8080
+1. lsof -i :8080
 
 ## 10. Configure Security Group
 - Ensure that port 8080 is allowed in the inbound rules of your EC2 instance's security group.
@@ -91,7 +91,7 @@ Password: 123
 }
 
 - Verify the data by visiting:
-http://54.88.58.168:8080/student
-To fetch a specific student by ID, use:
+- http://54.88.58.168:8080/student
+- To fetch a specific student by ID, use:
 
 http://54.88.58.168:8080/student/1
