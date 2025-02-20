@@ -1,5 +1,5 @@
 # static-app-aws
-- Here 54.88.58.168 is my Public IP
+- Here 54.88.58.168 is my Public IP of EC2 instance.
 - Steps to Set Up and Deploy the Spring Boot Application
 
 ## 1. Create a VPC and Subnet
@@ -46,45 +46,43 @@ mvn clean install
 - This will generate a .jar file inside the target folder.
 
 ## 9. Run the Application
-Execute the JAR file:
-java -jar target/spring-embedded-h2-db-0.0.1-SNAPSHOT.jar
+-Execute the JAR file:
+1. java -jar target/spring-embedded-h2-db-0.0.1-SNAPSHOT.jar
 
-By default, Spring Boot runs on port 8080. To check if the application is running:
+- By default, Spring Boot runs on port 8080. To check if the application is running:
 lsof -i :8080
 
 ## 10. Configure Security Group
-Ensure that port 8080 is allowed in the inbound rules of your EC2 instance's security group.
+- Ensure that port 8080 is allowed in the inbound rules of your EC2 instance's security group.
 
 ## 11. Access the Application
-Open your browser and navigate to:
-
+- Open your browser and navigate to:
 http://54.88.58.168:8080/student
 Initially, you will see a blank page because no data has been added yet.
 
 ## 12. Enable Remote Access to H2 Console
-Stop the running application using Ctrl+C.
+- Stop the running application using Ctrl+C.
 
-Edit the application.properties file and add the following line:
-spring.h2.console.settings.web-allow-others=true
+- Edit the application.properties file and add the following line:
+1. spring.h2.console.settings.web-allow-others=true
 
-Save the file and rebuild the application:
-mvn clean install
-java -jar target/spring-embedded-h2-db-0.0.1-SNAPSHOT.jar
+- Save the file and rebuild the application:
+1. mvn clean install
+2. java -jar target/spring-embedded-h2-db-0.0.1-SNAPSHOT.jar
 
-Access the H2 console at:
+- Access the H2 console at:
 http://54.88.58.168:8080/h2-console/
 
-Use the following details to connect:
+- Use the following details to connect:
 URL: jdbc:h2:mem:rjanytest
 Username: sa
 Password: 123
 
 ## 13. Add Data to the Application
+- Use a tool like ReqBin to send a POST request to:
+- http://54.88.58.168:8080/student
 
-Use a tool like ReqBin to send a POST request to:
-http://54.88.58.168:8080/student
-
-Use the following JSON body:
+- Use the following JSON body:
 {
   "id": 1,
   "name": "Bhavin",
@@ -92,7 +90,7 @@ Use the following JSON body:
   "email": "demo@gmail.com"
 }
 
-Verify the data by visiting:
+- Verify the data by visiting:
 http://54.88.58.168:8080/student
 To fetch a specific student by ID, use:
 
