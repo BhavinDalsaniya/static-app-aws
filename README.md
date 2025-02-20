@@ -46,7 +46,7 @@ Build the application using Maven:
 mvn clean install
 This will generate a .jar file inside the target folder.
 
-##9. Run the Application
+## 9. Run the Application
 Execute the JAR file:
 java -jar target/spring-embedded-h2-db-0.0.1-SNAPSHOT.jar
 
