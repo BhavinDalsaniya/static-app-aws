@@ -1,6 +1,6 @@
-# static-app-aws
-- Here 54.88.58.168 is my Public IP of EC2 instance.
+# 0. static-app-aws
 - Steps to Set Up and Deploy the Spring Boot Application
+- Here 54.88.58.168 is my Public IP of EC2 instance.
 
 ## 1. Create a VPC and Subnet
 - First, create a VPC in any one region with the CIDR block `10.0.0.0/16`.
