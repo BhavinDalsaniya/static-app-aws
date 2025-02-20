@@ -18,26 +18,29 @@
 
 ## 4. Connect to Your EC2 Instance
 - Use the following command to connect to your EC2 instance via SSH:
-
-1.  cd Downloads
-2.  ssh -i first-ec2.pem ubuntu@54.88.58.168
+- ```bash
+  cd Downloads
+  ssh -i first-ec2.pem ubuntu@54.88.58.168
 
 ## 5. Clone the repository:
-3. mkdir repos
-4. cd repos/
-5. git clone https://github.com/rafsan-jany/spring-boot-rest-api-h2-database.git
-6. cd spring-boot-rest-api-h2-database
+- ```bash
+  mkdir repos
+  cd repos/
+  git clone https://github.com/rafsan-jany/spring-boot-rest-api-h2-database.git
+  cd spring-boot-rest-api-h2-database
 
 
 ## 6. Install Required Software
 - Update the package list and install Java 17 and Maven:
-1. sudo apt update
-2. sudo apt install openjdk-17-jdk -y
-3. sudo apt install maven -y
+- ```bash
+  sudo apt update
+  sudo apt install openjdk-17-jdk -y
+  sudo apt install maven -y
 
 ## 7. Verify the installations:
-1. java --version
-2. mvn --version
+- ```bash
+  java --version
+  mvn --version
 
 ## 8. Build the Application
 - Build the application using Maven:
@@ -47,18 +50,20 @@ mvn clean install
 
 ## 9. Run the Application
 - Execute the JAR file:
-1. java -jar target/spring-embedded-h2-db-0.0.1-SNAPSHOT.jar
+- ```bash
+  java -jar target/spring-embedded-h2-db-0.0.1-SNAPSHOT.jar
 
 - By default, Spring Boot runs on port 8080. To check if the application is running:
-1. lsof -i :8080
+- ```bash
+  lsof -i :8080
 
 ## 10. Configure Security Group
 - Ensure that port 8080 is allowed in the inbound rules of your EC2 instance's security group.
 
 ## 11. Access the Application
 - Open your browser and navigate to:
-http://54.88.58.168:8080/student
-Initially, you will see a blank page because no data has been added yet.
+-http://54.88.58.168:8080/student
+-Initially, you will see a blank page because no data has been added yet.
 
 ## 12. Enable Remote Access to H2 Console
 - Stop the running application using Ctrl+C.
@@ -67,8 +72,9 @@ Initially, you will see a blank page because no data has been added yet.
 1. spring.h2.console.settings.web-allow-others=true
 
 - Save the file and rebuild the application:
-1. mvn clean install
-2. java -jar target/spring-embedded-h2-db-0.0.1-SNAPSHOT.jar
+- ```bash
+  mvn clean install
+  java -jar target/spring-embedded-h2-db-0.0.1-SNAPSHOT.jar
 
 - Access the H2 console at:
 http://54.88.58.168:8080/h2-console/
