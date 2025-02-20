@@ -1,5 +1,5 @@
 # static-app-aws
-
+# Here 54.88.58.168 is my Public IP
 # Steps to Set Up and Deploy the Spring Boot Application
 
 ## 1. Create a VPC and Subnet
@@ -23,22 +23,21 @@
 2.  ssh -i first-ec2.pem ubuntu@54.88.58.168
 
 ## 5. Clone the repository:
-3.mkdir repos
-4.cd repos/
-5.git clone https://github.com/rafsan-jany/spring-boot-rest-api-h2-database.git
-6.cd spring-boot-rest-api-h2-database
+3. mkdir repos
+4. cd repos/
+5. git clone https://github.com/rafsan-jany/spring-boot-rest-api-h2-database.git
+6. cd spring-boot-rest-api-h2-database
 
 
 ## 6. Install Required Software
 Update the package list and install Java 17 and Maven:
-
-sudo apt update
-sudo apt install openjdk-17-jdk -y
-sudo apt install maven -y
+1. sudo apt update
+2. sudo apt install openjdk-17-jdk -y
+3. sudo apt install maven -y
 
 ## 7. Verify the installations:
-java --version
-mvn --version
+1. java --version
+2. mvn --version
 
 ## 8. Build the Application
 Build the application using Maven:
