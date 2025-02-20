@@ -80,9 +80,10 @@ mvn clean install
 http://54.88.58.168:8080/h2-console/
 
 - Use the following details to connect:
-- URL: jdbc:h2:mem:rjanytest
-1. Username: sa
-2. Password: 123
+- URL : jdbc:h2:mem:rjanytest
+- ```bash
+  Username: sa
+  Password: 123
 
 ## 13. Add Data to the Application
 - Use a tool like ReqBin to send a POST request to:
@@ -99,4 +100,4 @@ http://54.88.58.168:8080/h2-console/
 - Verify the data by visiting:
 - http://54.88.58.168:8080/student
 - To fetch a specific student by ID, use:
-1. http://54.88.58.168:8080/student/1
+- http://54.88.58.168:8080/student/1
