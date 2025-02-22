@@ -44,8 +44,8 @@
 
 ## 8. Build the Application
 - Build the application using Maven:
-
-mvn clean install
+- ```bash
+  mvn clean install
 - This will generate a .jar file inside the target folder.
 
 ## 9. Run the Application
